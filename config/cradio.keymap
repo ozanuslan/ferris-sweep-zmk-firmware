@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
+#define HRML(k2,k3,k4) &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
+#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RALT k2  &ht RCTRL k3
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
@@ -54,7 +54,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
+                                             &lt ESC   &kp LSHIFT    &kp SPACE  &lt RIG TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -71,7 +71,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
+                                             &lt ESC    &kp LSHIFT   &kp SPACE  &lt RIG TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -82,11 +82,11 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   |          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp DEL   &kp CAPS   &kp PSCRN  &kp INS     &trans          &trans    &kp LARW   &kp DARW   &kp UARW   &kp RARW 
+        //│          │          │          │          │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
+            &trans    &trans     &trans     &trans      &trans          &trans    &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-            &kp ESC   &trans     &trans     &trans      &trans          &trans    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END 
+        //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   |          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
+            &kp DEL   &kp CAPS   &kp PSCRN  &kp INS     &trans          &trans    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans      &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -97,13 +97,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  &       │  *       │  `       │  ~       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE   &kp TILDE
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  "       │  [       │  {       │  (       │          │   │   /      │  -       │  =       │     :    │  ;       │
-            &kp DQT  &kp LBKT   &kp LBRC   &kp LPAR   &trans         &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON   &kp SEMI
+            &kp DQT    &kp LBKT   &kp LBRC   &kp LPAR   &trans         &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
-            &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
+            &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans        &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
