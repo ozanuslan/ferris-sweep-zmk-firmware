@@ -80,15 +80,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
-            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
+            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │          │          │          │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp DEL    &trans     &trans     &trans      &trans          &trans    &kp LARW   &kp DARW   &kp UARW   &kp RARW
+            &kp DEL    &kp LCTRL  &kp LALT   &kp LGU     &trans         &trans    &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ CapsLock │ PrintSc  │  INSERT  │          |   |          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-            &trans     &kp CAPS   &kp PSCRN  &kp INS     &trans          &trans    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
+             &trans    &kp CAPS   &kp PSCRN  &kp INS     &trans         &trans    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans      &trans         &trans     &trans
+                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -100,12 +100,12 @@
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  "       │  [       │  {       │  (       │          │   │   /      │  -       │  =       │     :    │  ;       │
-            &kp DQT    &kp LBKT   &kp LBRC   &kp LPAR   &trans         &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+            &kp DQT    &kp LBKT   &kp LBRC   &kp LPAR    &trans        &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
-            &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans        &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
+            &kp SQT    &kp RBKT   &kp RBRC   &kp RPAR    &trans        &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -120,10 +120,10 @@
             &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3  &kp C_BRI_UP  &trans   &kp C_VOL_UP  &kp C_PP
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │          |  VOL DOWN │ PREVSONG │
-            &kp F9     &kp F10    &kp F11    &kp F12     &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans   &kp C_VOL_DN &kp C_PREV
+            &kp F9     &kp F10    &kp F11    &kp F12    &bt BT_CLR       &bt BT_SEL 4  &kp C_BRI_DEC  &trans   &kp C_VOL_DN &kp C_PREV
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
-                                                &trans     &trans         &trans     &trans
-        //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+                                              &trans       &trans           &trans       &trans
+        //                                 ╰───────────┴────────────╯   ╰────────────┴────────────╯
             >;
         };
     };
